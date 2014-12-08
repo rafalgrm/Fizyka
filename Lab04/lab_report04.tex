@@ -202,8 +202,8 @@ Korzystając z programu komputerowego, dopasowaliśmy dla obu drutów prostą ap
 
 Ptrzymujemy takie współczynniki prostych:
 \begin{itemize}
-	\item Drut stalowy: $a = 1.24 \cdot 10^{-5}$, $u(a) = 2.4 \cdot 10^{-7}$
-	\item Drut mosiężny: $a = 1.29 \cdot 10^{-5}$, $u(a) = 3.17 \cdot 10^{-7}$
+	\item Drut stalowy: $a = 1.24 \cdot 10^{-5} \frac{m}{N}$, $u(a) = 2.4 \cdot 10^{-7} \frac{m}{N}$
+	\item Drut mosiężny: $a = 1.29 \cdot 10^{-5} \frac{m}{N}$, $u(a) = 3.17 \cdot 10^{-7} \frac{m}{N}$
 \end{itemize}
 
 \subsection{Wyznaczenie modułu Younga}
@@ -222,10 +222,13 @@ Zatem moduł Younga przyjmuje wartości:
 Korzystając z również wyprowadzonego we wstępie teoretycznym wzoru na niepewność złożoną dla modułu Younga:
 
 \begin{equation}
-	\frac{U_{c}(E)}{E} = \sqrt{(\frac{u(l)}{l})^{2}+(-2\frac{u(d)}{d})^{2}+(-\frac{u(a)}{a})^{2}}
+	\frac{U_{c}(E)}{E} = \sqrt{(\frac{u(l)}{l})^{2}+(-2\frac{u(d)}{d})^{2}+(-\frac{u(a)}{a})^{2}} = \sqrt{(\frac{0.001}{1.07})^2 + 4(\frac{8 \cdot 10^{-6}}{7.7 \cdot 10^{-4}})^2+(\frac{2.4 \cdot 10^{-7}}{1.24 \cdot 10^{-5}})^2} \approx \sqrt{8.07 \cdot 10^{-4}} \approx 0.028
 \end{equation}
 
-Dla drutu stalowego $\frac{u_{cSTAL}(E)}{E} = 0.03$, natomiast dla wykonanego z mosiądzu: $\frac{u_{cMOSI}(E)}{E} = 0.03$
+natomiast dla wykonanego z mosiądzu: 
+\begin{equation}
+\frac{u_{cMOSI}(E)}{E} = \sqrt{(\frac{u(l)}{l})^{2}+(-2\frac{u(d)}{d})^{2}+(-\frac{u(a)}{a})^{2}} = \sqrt{(\frac{0.001}{1.07})^2 + 4(\frac{8 \cdot 10^{-6}}{1.15 \cdot 10^{-3}})^2+(\frac{3.17 \cdot 10^{-7}}{1.29 \cdot 10^{-5}})^2} \approx 0.028
+\end{equation}
 
 \subsection{Porównanie wyniku pomiaru do wartości tablicowych}
 Przyjmując współczynnik rozszerzenia k = 2 otrzymujemy, że wynik dla stali powinien zawierać się w przedziale [197.4, 233.2]. Uzyskany przez nas wynik 186.4 GPa jest poza tym przedziałem. Powodem tego może być wysłużenie tego drutu, o czym więcej we wnioskach.
