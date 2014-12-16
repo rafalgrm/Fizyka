@@ -32,7 +32,7 @@
 \usepackage{graphicx} % Required for the inclusion of images
 \usepackage{natbib} % Required to change bibliography style to APA
 \usepackage{amsmath} % Required for some math elements 
-
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
 \renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
@@ -106,19 +106,19 @@ Dla każdej każdej wartości napięcia (175,200,225,250 [V]) lampy regulowaliś
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \multicolumn{5}{|c|}{Wyniki pomiarów}  \\ \hline
-U[V] & \multicolumn{4}{|c|}{175} \\ \hline
+\cellcolor{orange!45}{U[V]} & \multicolumn{4}{|>{\columncolor[gray]{.8}}c|}{175} \\ \hline
 r[cm] & 0.02 & 0.03 & 0.04 & 0.05 \\ \hline
 I[A] & 3.6 & 2.3 & 1.6 & 1.3 \\ \hline
 
-U[V] & \multicolumn{4}{|c|}{200} \\ \hline
+\cellcolor{orange!45}{U[V]} & \multicolumn{4}{|>{\columncolor[gray]{.8}}c|}{200} \\ \hline
 r[cm] & 0.02 & 0.03 & 0.04 & 0.05 \\ \hline
 I[A] & 3.8 & 2.4 & 1.8 & 1.4 \\ \hline 
 
-U[V] & \multicolumn{4}{|c|}{225} \\ \hline
+\cellcolor{orange!45}{U[V]} & \multicolumn{4}{|>{\columncolor[gray]{.8}}c|}{225} \\ \hline
 r[cm] & 0.02 & 0.03 & 0.04 & 0.05 \\ \hline
 I[A] & 4 & 2.6 & 1.9 & 1.5 \\ \hline
 
-U[V] & \multicolumn{4}{|c|}{250} \\ \hline
+\cellcolor{orange!45}{U[V]} & \multicolumn{4}{|>{\columncolor[gray]{.8}}c|}{250} \\ \hline
 r[cm] & 0.02 & 0.03 & 0.04 & 0.05 \\ \hline
 I[A] & 4.1 & 2.7 & 2 & 1.6 \\ \hline
 \end{tabular}
