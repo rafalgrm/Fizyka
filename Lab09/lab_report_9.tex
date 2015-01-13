@@ -98,9 +98,9 @@ Celem ćwiczenia było zapoznanie się z budową i działaniem przyrządu nazwan
 %	SECTION 4
 %----------------------------------------------------------------------------------------
 \section{Wyniki pomiarów}
-
 \begin{table}[htbp]
 \centering
+\scalebox{0.65}{
 \begin{tabular}{|c|r|r|r|r|r|r|}
 \hline
 Lp & \multicolumn{1}{c|}{Liczba Zwojów n} & \multicolumn{1}{c|}{Prąd [mA]} & \multicolumn{1}{c|}{Kąt w lewo [$^o$]} & \multicolumn{1}{c|}{Kąt w prawo [$^o$]} & \multicolumn{1}{c|}{Średni kąt [$^o$]} & \multicolumn{1}{c|}{B [$\mu T$]} \\ \hline
@@ -125,10 +125,15 @@ Lp & \multicolumn{1}{c|}{Liczba Zwojów n} & \multicolumn{1}{c|}{Prąd [mA]} & \
 19 & 40 & 90 & 34 & 34 & 34 & 2.58 \\ \hline
 20 & 40 & 110 & 41 & 41 & 41 & 2.45 \\ \hline
 \end{tabular}
+}
 \caption{Wyniki pomiarów dla różnych wartości prądu płynącego w zwojnicy}
 \label{}
 \end{table}
-\newpage
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.53]{ch01}
+\end{figure}
 
 
 %----------------------------------------------------------------------------------------
@@ -137,9 +142,15 @@ Lp & \multicolumn{1}{c|}{Liczba Zwojów n} & \multicolumn{1}{c|}{Prąd [mA]} & \
 
 \section{Opracowanie wyników}
 \subsection{Obliczenie wartości poziomej składowej indukcji ziemskiego pola magnetycznego}
-Wartość średnią poziomej indukcji magnetycznej obliczyliśmy licząć średnią arytmetyczną ze wszystkich pomiarów.
-$B_0 = \overline{B} = 2.45 \cdot 10^{-5} \mu T$
 
+Wartość poziomej indukcji magnetycznej wyliczyliśmy z zależności:
+\begin{equation}
+B_0 = \mu_0 \cdot \frac{NI}{2R \, tg \alpha}
+\end{equation}
+
+Wartość średnią poziomej indukcji magnetycznej obliczyliśmy licząć średnią arytmetyczną ze wszystkich pomiarów.
+$B_0 = \overline{B} = (2.45 \pm 0.28) \cdot 10^{-5} \mu T$
+\newline
 \subsection{Obliczenie niepewności pomiarowych}
 Niepewność wyliczonej indukcji policzyliśmy z odchylenia standardowego średniej uzyskanych pomiarów.
 \begin{equation}
@@ -149,36 +160,45 @@ Czyli względna niepewność:
 \begin{equation}
 \frac{u_A(B_0)}{B_0} \approx 2.8\%
 \end{equation}
+
 Niepewności typu B będą dotyczyły amperomierza:
 \begin{equation}
-\Delta I = \frac{zakres x klasa}{100} = 56 mA
+\Delta I = \frac{zakres \, x \, klasa}{100} = 56 mA
 \end{equation}
+
 \begin{equation}
 u_B(I) = \frac{\Delta I}{\sqrt{3}} = 32.3 mA 
 \end{equation}
+
 \begin{equation}
 \frac{u_B(I)}{I} = 11 \%
 \end{equation}
+
 Niepewność pomiaru grubości cewki oszacowaliśmy grubo przyjmując, z racji odczuwalnych różnic w geometrii i rozdzielczości miary na 3 mm.
 Względny błąd wyniesie zatem:
 \begin{equation}
 \frac{u_B(R)}{R} = 	\frac{3}{130} \approx 2.3 \%
 \end{equation}
 Na koniec obliczamy względną niepewność złożoną: \\ \newline
+\newline
 \centerline{$\frac{u_c(B_0)}{B_0} = \sqrt{[\frac{u_A(B_0)}{B_0}]^2 + [\frac{u_B(I)}{I}]^2 + [\frac{u_B(R)}{R}]^2} = \sqrt{[2.8\%]^2+[11\%]^2+[2.3\%]^2} \approx 11.6 \%$}
 \newline
 \newline
 I z tego liczymy $u_c(B_0) = 2.84 \cdot 10^{-6} \mu T$
+
+
+\newpage
+
 %----------------------------------------------------------------------------------------
 %	SECTION 6
 %----------------------------------------------------------------------------------------
 \section{Wnioski}
 
-Otrzymana wartość składowej poziomej natężenia pola magnetycznego Ziemi dla Krakowa, wyniosła $B_0 = 2.45 \cdot 10^{-5} \mu T$. W porównaniu do wartości tabelarycznej: $B_T = 2.1 \cdot 10^{-5} \mu T$ oraz k=2 mieścimy się przedziale w niepewności rozszerzonej ($1.53 \cdot 10^{-5} \mu T$, $2.67 \cdot 10^{-5} \mu T$).
+Otrzymana wartość składowej poziomej natężenia pola magnetycznego Ziemi dla Krakowa, wyniosła $B_0 = (2.45 \pm 0.28) \cdot 10^{-5} \mu T$. W porównaniu do wartości tabelarycznej: $B_T = 2.1 \cdot 10^{-5} \mu T$ oraz k=2 mieścimy się przedziale w niepewności rozszerzonej ($1.53 \cdot 10^{-5} \mu T$, $2.67 \cdot 10^{-5} \mu T$).
 
 Nie używając niepewności rozszerzonej wykroczyliśmy tylko nieznacznie poza przedział, co świadczy o prawidłowym wykonaniu doświadczenia. Nie zaobserwowano błędów grubych.
 
-Największy wpływ na niepewność pomiaru miała mała rozdzielczość amperomierza równa $u_c 2.84 mA T$, a największa możliwa do otrzymania niepewność wyniosła: \begin{equation}
+Największy wpływ na niepewność pomiaru miała mała rozdzielczość amperomierza równa $u_c 2.8 mA T$, a największa możliwa do otrzymania niepewność wyniosła: \begin{equation}
 \Delta I = \frac{zakres \, x \, klasa}{100} = 56 mA
 \end{equation}
 
